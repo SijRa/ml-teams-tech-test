@@ -1,4 +1,4 @@
-# Turing tech test
+# ML Teams Tech Test
 
 ## Instructions
 
