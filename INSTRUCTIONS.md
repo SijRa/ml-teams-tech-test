@@ -1,4 +1,4 @@
-# Archimedes tech test
+# Turing tech test
 
 ## Instructions
 
