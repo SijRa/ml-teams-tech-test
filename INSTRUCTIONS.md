@@ -15,7 +15,7 @@ To send us your solution you can do any of the following:
 
 ## Context
 
-In the Archimedes team, one of our typical activities might look like the following:
+In the Turing team, one of our typical activities might look like the following:
 - ingest input data
 - enrich with various external/internal information
 - present the transformed data
