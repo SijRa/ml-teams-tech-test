@@ -4,14 +4,14 @@
 
 We know that you're busy and we wanted to give you the chance to show us what you can do, so we designed this task to take approximately 2 hours to complete.
 
-You are free to use any language/framework you are comfortable with.
-
-Please feel free to reach us out if you have any questions/doubts.
+Please write your solution in Python.
 
 To send us your solution you can do any of the following:
 - send us the link of your git repo (if it's a private repo, please give us access)
 - send us a zip git repo
 - fork this repo as a private fork and give us the access
+
+Please feel free to reach us out if you have any questions/doubts.
 
 ## Context
 
