@@ -8,7 +8,7 @@ from operator_table import OperatorsTable
 
 logger = logging.getLogger(__name__)
 
-def generate_report_data_list(calls_file:str, operators_file:str) -> Tuple[list[str], list[str], list[str], list[str], list[str]]:
+def generate_report_data_list(calls_file:str, operators_file:str) -> Tuple[list[str], list[str], list[str], list[str], list[float]]:
     """
     Returns a tuple of lists containing id, date, number, operator and riskScore from calls and operators.
     """
@@ -54,7 +54,7 @@ def generate_report_data_list(calls_file:str, operators_file:str) -> Tuple[list[
         riskScore = call['attributes']['riskScore']
         if call['attributes']['redList'] == True:
             riskScore = 0
-        riskScore_list.append(str(riskScore)) # RISK SCORE
+        riskScore_list.append(round(riskScore, 1)) # RISK SCORE
 
         logger.debug('%s \t %s \t %s \t %s \t %s', id_list[-1], date_list[-1], number_list[-1], operator_list[-1], riskScore_list[-1])
     

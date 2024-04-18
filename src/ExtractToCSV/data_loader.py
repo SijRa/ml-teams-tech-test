@@ -39,5 +39,5 @@ class DataLoader:
             logger.error('Failed to extract data from %s', filename_with_extension)
             sys.stdout('Failed to extract data from %s. Error key: \'%s\'', filename_with_extension, default_key)
             sys.exit(1) # non-successful termination
-        logger.info('%s extracted successfully', filename_with_extension)
+        logger.info('JSON Extraction successful (%s)', filename_with_extension)
         return json_contents

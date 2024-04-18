@@ -43,14 +43,14 @@ class OperatorsTable:
             return 'Unknown'
         return operator
     
-    def __sizeof__(self) -> int:
+    def __len__(self) -> int:
         """
         Prints size of operators table
         """
-        print(len(self.__table.values()))
+        return len(self.__table.values())
 
     def __str__(self) -> str:
         """
         Prints operators table
         """
-        print(self.__table)
+        return str(self.__table)
