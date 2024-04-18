@@ -34,11 +34,12 @@ class OperatorsTable:
         Returns operator if found otherwise returns 'Unknown'
         """
         prefix_group = floor(number_band/1000)*1000
+        logger.debug(f"Prefix grouping: {number_band} -> {prefix_group}")
         try:
             operator = self.__table[prefix_group]
-            logger.debug('Operator found for prefix: %s', prefix_group)
+            logger.debug('Operator found for prefix group: %s -> %s', prefix_group, operator)
         except KeyError:
-            logger.warn('Operator NOT found for prefix: %s', prefix_group)
+            logger.warn('Operator NOT found for prefix group: %s', prefix_group)
             return 'Unknown'
         return operator
     

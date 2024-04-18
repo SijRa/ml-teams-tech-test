@@ -5,10 +5,6 @@ import json
 from io import TextIOWrapper
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(filename='ExtractCSV.log',
-                    encoding='utf-8',
-                    level=logging.DEBUG,
-                    format='%(levelname)s: %(message)s',)
 
 class DataLoader:
     """
@@ -26,14 +22,14 @@ class DataLoader:
 
     def __open_json_file(self, filename:str) -> TextIOWrapper:
         """
-        Opens file using filename and returns TextIOWrapper
+        Returns TextIOWrapper from opening file using filename
         """
         logger.debug(f'File {filename} JSON opened')
         return open(filename)
     
-    def extract_json_from_file(self, filename, default_key='data'):
+    def extract_json_from_file(self, filename:str, default_key='data'):
         """
-        Extracts the JSON contents from given filename using default extraction key
+        Returns JSON contents from given filename using default extraction key
         """
         filename_with_extension = filename.split('/')[-1]
         file = self.__open_json_file(filename)
