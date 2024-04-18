@@ -35,13 +35,15 @@ def generate_report_data_list(calls_file:str, operators_file:str) -> Tuple[list[
 
         logger.debug('call data: %s', call)
         
-        id_list.append(call['id']) # ID
+        id = call['id']
+        id_list.append(id) # ID
         
         date_list.append(extract_date(call['attributes']['date'])) # DATE
         
         try:
             number = call['attributes']['number'] 
         except KeyError:
+            logger.warn('Caller number NOT found for caller: %s', id)
             number = 'Withheld'
         number_list.append(number) # NUMBER
 

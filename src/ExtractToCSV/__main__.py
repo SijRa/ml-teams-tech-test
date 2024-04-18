@@ -61,7 +61,7 @@ def main() -> None:
         type=str,
         required=False,
         default='output.csv',
-        help="Output file for generate report"
+        help="Output file for generate report e.g. report.csv"
     )
 
     parser.add_argument(
@@ -69,7 +69,7 @@ def main() -> None:
         type=str,
         required=False,
         default='INFO',
-        help='Sets the logging level',
+        help='Sets the logging level [DEBUG, INFO]',
     )
 
     args = parser.parse_args()
