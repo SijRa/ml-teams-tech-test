@@ -13,7 +13,7 @@ def get_phone_group(number:str) -> int:
     logger.debug('\tGroup conversion: %s -> %s', number, group)
     return group
 
-def create_dict_from_lists(ids:list[str], dates:list[str], numbers:list[str], operators:list[str], riskScores:list[float]) -> list[dict]:
+def create_dict_from_lists(ids:list[str], dates:list[str], numbers:list[str], operators:list[str], riskScores:list[float]) -> list[str]:
     """
     Returns a sorted list of dictionarys from lists of data
     """
