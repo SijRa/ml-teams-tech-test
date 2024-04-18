@@ -55,6 +55,8 @@ def generate_report_data_list(calls_file:str, operators_file:str) -> Tuple[list[
 
         riskScore = call['attributes']['riskScore']
         if call['attributes']['redList'] == True:
+            riskScore = 1
+        if call['attributes']['green'] == True:
             riskScore = 0
         riskScore_list.append(round(riskScore, 1)) # RISK SCORE
 
